@@ -1,23 +1,18 @@
 import 'dart:io';
-
-void main() {
-  List<int> Numbers = [];
-
-  print("Enter numbers : ");
-  String input;
-
-  do {
-    input = stdin.readLineSync()!;
-    if (input != 'exit') {
-      int number = int.parse(input);
-      Numbers.add(number);
-    }
-  } while (input != 'exit');
-
-  print('\nNegative Elements in the Array:');
-  for (int i = 0; i < Numbers.length; i++) {
-    if (Numbers[i] < 0) {
-      print(Numbers[i]);
-    }
+void main(){
+  var array = [];
+  List myArray = array.toList();
+  stdout.write("Number OF Elements : ");
+  int len = int.parse(stdin.readLineSync()!);
+  for(int i = 1 ; i <= len ; i++){
+    stdout.write("Enter Element $i : ");
+    int el = int.parse(stdin.readLineSync()!);
+    myArray.add(el);
   }
+  print("Negative Elements is :  ");
+  myArray.forEach((element) {
+    if(element<0){
+      stdout.write("$element");
+}
+});
 }

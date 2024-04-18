@@ -1,20 +1,22 @@
 import 'dart:io';
 
 void main() {
-  List<int> allNumbers = [];
+  List<int> myList = [];
 
-  print("Enter any 10 numbers: ");
+  int n;
+  print("Enter The numbers of length : ");
+  n = int.parse(stdin.readLineSync()!);
 
-  for (int i = 0; i < 10; i++) {
+  for (int i = 0; i < n; i++) {
     String userInput = stdin.readLineSync()!;
     int number = int.parse(userInput);
-    allNumbers.add(number);
+    myList.add(number);
   }
 
-  int largestNumber = allNumbers[0];
-  for (int i = 1; i < allNumbers.length; i++) {
-    if (allNumbers[i] > largestNumber) {
-      largestNumber = allNumbers[i];
+  int largestNumber = myList[];
+  for (int i = 1; i < myList.length; i++) {
+    if (myList[i] > largestNumber) {
+      largestNumber = myList[i];
     }
   }
 

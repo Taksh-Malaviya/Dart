@@ -12,7 +12,7 @@ void main() {
     [7, 8, 9],
   ];
 
-  print("\n----:Array a:----\n");
+
   for (var i = 0; i < 3; i++) {
     for (var j = 0; j < 3; j++) {
       stdout.write('Enter element of a[$i][$j] : ');
@@ -21,7 +21,7 @@ void main() {
     }
   }
 
-  print("\n----:Array b:----\n");
+
   for (var i = 0; i < 3; i++) {
     for (var j = 0; j < 3; j++) {
       stdout.write('Enter element of a[$i][$j] : ');

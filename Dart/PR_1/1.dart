@@ -1,15 +1,23 @@
 import 'dart:io';
 
-void main(){
-  int n;
+void main() {
+  List<int> allNumbers = [];
 
-  print("ENTER ANY NUMBER");
-  n = int.parse(stdin.readLineSync()!);
+  print("Enter numbers : ");
+  String input;
 
-  if(n>0){
-    print("NUMBER IS POSITIVE");
-  }else{
-    print("NUMBER IS NAGATIVE");
+  do {
+    input = stdin.readLineSync()!;
+    if (input != 'exit') {
+      int number = int.parse(input);
+      allNumbers.add(number);
+    }
+  } while (input != 'exit');
+
+  print('\nNegative Elements in the Array:');
+  for (int i = 0; i < allNumbers.length; i++) {
+    if (allNumbers[i] < 0) {
+      print(allNumbers[i]);
+    }
   }
-
 }

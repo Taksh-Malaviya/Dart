@@ -13,7 +13,7 @@ void main() {
   }
   print("**********************");
   print("1. Insert");
-  print("2. Delet");
+  print("2. Delete");
   print("3. Update");
   print("4. View");
   print("5. Exit");

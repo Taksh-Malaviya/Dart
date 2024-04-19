@@ -11,13 +11,13 @@ void main() {
     int val = int.parse(stdin.readLineSync()!);
     a[i] = val;
   }
-  print("==============");
+  print("**********************");
   print("1. Insert");
   print("2. Delet");
   print("3. Update");
   print("4. View");
   print("5. Exit");
-  print("==============");
+  print("********************");
   stdout.write("Enter your choice : ");
   int choice = int.parse(stdin.readLineSync()!);
 

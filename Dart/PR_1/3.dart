@@ -46,7 +46,9 @@ void main() {
 
     case 4:
       print('List : $a');
-
+break;
+      case 5:
+        print("Exiting..");
     default:
       print('Invalid choice!!');
   }

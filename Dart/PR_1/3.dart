@@ -6,11 +6,12 @@ void main() {
 
   List<int> a = List.generate(size, (index) => index);
 
-  for (var i = 0; i < size; i++) {
+  for (int i = 0; i < size; i++) {
     stdout.write("Enter element of $i : ");
     int val = int.parse(stdin.readLineSync()!);
     a[i] = val;
   }
+  do {
   print("**********************");
   print("1. Insert");
   print("2. Delete");
@@ -49,4 +50,5 @@ void main() {
     default:
       print('Invalid choice!!');
   }
+  }while(choice!=5);
 }

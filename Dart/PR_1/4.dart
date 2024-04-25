@@ -1,37 +1,41 @@
 import 'dart:io';
 
 void main() {
-  List<List<int>> a = [
-    [1, 2, 3],
-    [4, 5, 6],
-    [7, 8, 9],
-  ];
-  List<List<int>> b = [
-    [1, 2, 3],
-    [4, 5, 6],
-    [7, 8, 9],
-  ];
-
-
-  for (var i = 0; i < 3; i++) {
-    for (var j = 0; j < 3; j++) {
-      stdout.write('Enter element of a[$i][$j] : ');
-      int val = int.parse(stdin.readLineSync()!);
-      a[i][j] = val;
-    }
-  }
-
-
-  for (var i = 0; i < 3; i++) {
-    for (var j = 0; j < 3; j++) {
-      stdout.write('Enter element of a[$i][$j] : ');
-      int val = int.parse(stdin.readLineSync()!);
-      a[i][j] = val;
-    }
-  }
-  print("\n----:Sum of Array:----\n"); 
-  for (var i = 0; i < 3; i++) {
-    for (var j = 0; j < 3; j++) stdout.write("${a[i][j] + b[i][j]} ");
-    print('');
-  }
+  stdout.write("Enter Row : ");
+  int row = int.parse(stdin.readLineSync()!);
+  print("");
+  stdout.write("Enter Column Number : ");
+  int col = int.parse(stdin.readLineSync()!);
+  List<List<int>> myArray1 = List.generate(row, (i) {
+    return List.generate(col, (j) {
+      stdout.write("Enter value for element ${[i]} ${[j]}: ");
+      return int.parse(stdin.readLineSync()!);
+    });
+  });
+  List<List<int>> myArray2 = List.generate(row, (i) {
+    return List.generate(col, (j) {
+      stdout.write("Enter value for element ${[i]} ${[j]}: ");
+      return int.parse(stdin.readLineSync()!);
+    });
+  });
+  print(" 1 : ");
+  myArray1.forEach((element) {
+    stdout.write("$element ");
+    print("");
+  });
+  print(" 2 :");
+  myArray2.forEach((element) {
+    stdout.write("$element ");
+    print("");
+  });
+  print("Array 1 + Array 2 :");
+  List<List<int>> myArray3 = List.generate(row, (i) {
+    return List.generate(col, (j) {
+      return myArray1[i][j] + myArray2[i][j];
+    });
+  });
+  myArray3.forEach((element) {
+    stdout.write("$element ");
+    print("");
+  });
 }
